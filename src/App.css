@@ -1,38 +1,252 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  max-width: 1240px;
+}
+
+/* -----------------------------------------------------------------------HOME SECTION */
+
+.home{
+  width: 100%;
+  height: 100vh;
+  background: url('./assets/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.h-cont{
+
+}
+
+.h-cont h1{
+  background-image: linear-gradient(to top, #01003E 0%, #500030 75%);
+  background-clip: text;
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+
+  font-size: 120px;
+  font-weight: 600;
+}
+
+.h-cont p{
+  /* text-fill-color: transparent; */
+  color: #01003E;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.h-phone{
+  background: url('./assets/mobile_bg.png');
+  background-size: cover;
+  height: 594px;
+  width: 282px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 70px #2e1b1b9a;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.bulb-icon{
+  font-size: 86px;
+}
+
+.h-phone-cont{}
+
+.h-phone-cont h3{
+  font-size: 38px;
+  font-weight: 600;
+  color: #FFD600;
+}
+
+.h-phone-cont p{
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.h-phone-btns{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: 16px;
+}
+
+.h-start{
+  background: #FFD600;
+  border: none;
+  border-radius: 6px;
+  padding: .7rem;
+  border: 2px #FFD600 solid;
+  font-weight: 500;
+  color: #01003E;
+  cursor :pointer;
+  transition: .2s ease all;
+}
+
+.h-start:hover{
+  background: #dfbd18;
+}
+
+.h-start:active{
+  background: #cdb125;
+}
+
+.h-learnmore{
+  background: none;
+  border: none;
+  border-radius: 6px;
+  padding: .7rem;
+  border: 2px #FFD600 solid;
+  font-weight: 500;
+  color: #FFD600;
+}
+
+.h-phone-input{
+  display: flex;
+  color: #FFD600;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  border: 2px #FFD600 solid;
+  border-radius: 6px;
+  padding: .7rem .4rem;
+  position: relative;
+}
+
+.h-phone-input input{
+  border: none;
+  background: none;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.h-phone-input input:disabled {
+  color: #FFD600;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.h-phone-input input::placeholder{
+  color: #FFD600;
+}
+
+.h-dropDownIcon{
+  font-size: 22px;
+  transition: .2s ease all;
+}
+
+.h-dropDownIcon:hover{
+  transform: rotateZ(-180deg)
+}
+
+.h-cat-drw{
+  width: 70%;
+  height: 26vh;
+  background: #FFD600;
+  padding: .4rem;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  overflow-y: scroll;
+  border-radius: 4px;
+  box-shadow: 0px 0px 6px #000;
+  color:#01003E;
+  text-align: left;
+  z-index: 123;
+  transition: .3s ease all;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: .2rem;
+}
+
+.h-cat-drw p{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.h-cat-drw::-webkit-scrollbar{
+  width: 2px;
+}
+
+.h-cat-drw::-webkit-scrollbar-thumb{
+  background: #01003E;
+}
+
+.h-phone-input input{}
+
+/* -----------------------------------------------------------------CATEGORIES PAGE STYLING */
+
+.categories{
+  width: 100%;
+  height: 100vh;
+  background: url("./assets/pac.png");
+  background-size:  cover;
+  background-repeat: no-repeat;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cat{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cat-cont{
+  width: 46%;
+}
+
+.cat-cont h2{
+  font-size: 54px;
+  font-weight: 600;
+  color: #01003E;
+}
+
+.cat-cont p{
+  font-size: 22px;
+  font-weight: 400;
+  color: #01003E;
+}
+
+.cat-buttons{
+  width:50%;
+  background: blue;
+}
+
+.cat-buttons button{
+  font-family: Poppins, sans-serif;
+  border: none;
+  background: #01003E;
+  color: #fff;
+  width: 100px;
+  height: 44px;
+  border-radius: 4px;
+}
+
+.cat-buttons button{
+  width:50%;
+}
+
+.cat-buttons button{
+  width:50%;
 }
